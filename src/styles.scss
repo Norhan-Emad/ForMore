@@ -1,11 +1,14 @@
 // Import custom Bootstrap SCSS
-@import"./custom-bootstrap.scss";
+@import "./custom-bootstrap.scss";
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Cinzel:wght@400..900&display=swap');
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+// Import custom component styles
+@import "./app/components/footer/footer.component";
+@import "./app/components/home/home.component";
 
 // Global styles
 $mainColorPer: #6b00ca;
@@ -16,9 +19,25 @@ body {
   font-family: "Catamaran", sans-serif;
 }
 
+@media (max-width: 580px) {
+  .logoBar {
+    a {
+      img {
+        width: 50px !important;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 60%;
+    -webkit-text-size-adjust: 100%; /* For Safari on iOS */
+    text-size-adjust: 100%;
+  }
+
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* For WebKit-based browsers */
   }
 }
 
@@ -83,13 +102,16 @@ ul {
   border-radius: 1.25rem;
   padding: .625rem;
   border: none;
+
   &:disabled {
     background-color: #d2008563;
     color: #ffffff70;
   }
+
   &:hover {
     box-shadow: 0rem 0rem .5rem $mainColorPink;
   }
+
   &:focus {
     border: none;
   }
@@ -108,6 +130,7 @@ ul {
   border-radius: 0.625rem;
   color: $mainColorPer;
   margin-inline: .1875rem;
+
   &:hover {
     background-color: $mainColorPink;
     color: #fff;
@@ -120,9 +143,7 @@ i {
 }
 
 form input {
-  &:focus,
-  &:hover,
-  &::selection {
+  &:focus, &:hover, &::selection {
     box-shadow: 0 0 .625rem $mainColorPink;
     transition: 0.6s;
   }
@@ -197,7 +218,8 @@ button:disabled {
   font-family: "Cinzel", serif;
   font-weight: bold;
   border-radius: 60% 100% 100% 50%;
-  &::after {
+
+  ::after {
     content: " ";
     position: absolute;
     top: .625rem;
@@ -224,6 +246,7 @@ ngx-spinner {
 }
 
 ::-moz-selection {
+  /* Code for Firefox */
   color: white;
   background: $mainColorPink;
 }
@@ -237,11 +260,8 @@ ngx-spinner {
   color: $mainColorPink;
   background-color: transparent;
   border: none;
-  &:focus {
+
+  :focus {
     box-shadow: 0 0 5px #d2008551;
   }
 }
-
-// Import custom component styles
-@import "./app/components/footer/footer.component";
-@import "./app/components/home/home.component";
