@@ -1,0 +1,37 @@
+// Import Bootstrap SCSS functions, variables, and mixins first
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+//forms
+@import "../node_modules/bootstrap/scss/forms/form-check";
+@import "../node_modules/bootstrap/scss/forms/form-control";
+@import "../node_modules/bootstrap/scss/forms/form-range";
+@import "../node_modules/bootstrap/scss/forms/form-select";
+@import "../node_modules/bootstrap/scss/forms/form-text";
+@import "../node_modules/bootstrap/scss/forms/input-group";
+@import "../node_modules/bootstrap/scss/forms/labels";
+@import "../node_modules/bootstrap/scss/forms/validation";
+//forms
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api"; // Import utilities
+
+// Override form-floating styles to neutralize them
+// .form-floating {
+//   display: block !important;
+// }
